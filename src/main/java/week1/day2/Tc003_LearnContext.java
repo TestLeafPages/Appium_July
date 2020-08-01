@@ -41,10 +41,6 @@ public class Tc003_LearnContext {
 			}
 		}
 		
-		driver.findElementById("").sendKeys("");
-		
-		
-		
 	}
 
 }
