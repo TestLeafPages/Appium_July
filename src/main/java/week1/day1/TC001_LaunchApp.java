@@ -2,13 +2,19 @@ package week1.day1;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileBy;
+import io.appium.java_client.MobileDriver;
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.touch.LongPressOptions;
+import io.appium.java_client.touch.offset.ElementOption;
 
 public class TC001_LaunchApp {
 	
@@ -20,7 +26,7 @@ public class TC001_LaunchApp {
 		dc.setCapability("appActivity", "com.android.mms.ui.ConversationList");
 		dc.setCapability("deviceName", "OnePlus 7T Pro");
 		dc.setCapability("platformName", "Android");
-		//dc.setCapability("automationName", "UiAutomator2");
+		dc.setCapability("automationName", "UiAutomator2");
 		dc.setCapability("noReset", true);
 		
 		
@@ -38,12 +44,6 @@ public class TC001_LaunchApp {
 		driver.findElementById("com.oneplus.mms:id/title").click();
 		
 		Thread.sleep(2000);
-		
-		driver.findElementById("com.oneplus.mms:id/compose_message_text").sendKeys("sending msg via Appium");
-		
-		
-		
-		
 		
 		
 	}
